@@ -1,0 +1,34 @@
+<html ng-app="myApp">
+
+<head>
+    <title>Calculator App</title>
+</head>
+
+<script src="angular.js"></script>
+<script src="app.js"></script>
+
+<body>
+    <h1>Calculator App</h1>
+    <div ng-controller="cal">
+        <p>
+            <span><input type="number" ng-model="operand_1"></input></span>
+            <span ng-if="operator == null">+</span>
+            <span ng-if="operator != null">{{operator}}</span>
+            <span><input type="number" ng-model="operand_2"></input></span>
+            <span ng-model="result!=null"></span> {{result}}</span>
+            <p>Choose Your Option:
+                <span>
+                    <button ng-click="add()">+</button>
+                    <button ng-click="substract()">-</button>
+                    <button ng-click="multiply()">*</button>
+                    <button ng-click="divide()">/</button>
+                </span>
+            </p>
+            <p>{{operand_1}}</p>
+            <p>{{operand_2}}</p>
+            <p>{{operator}}</p>
+        </p>
+    </div>
+</body>
+
+</html>
